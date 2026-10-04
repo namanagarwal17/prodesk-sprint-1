@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #111;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #777;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-buttons button {
+    padding: 7px 11px;
+    background: #fff;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.hero {
+    padding: 130px 0;
+    background: #f5f5f5;
+}
+
+.tag {
+    color: #777;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+.about,
+.services,
+.contact {
+    padding: 80px 0;
+}
+
+.about h2,
+.services h2,
+.contact h2 {
+    max-width: 700px;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.about p:last-child {
+    max-width: 650px;
+    color: #666;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.service-card h3 {
+    margin: 15px 0 10px;
+}
+
+.service-card p {
+    color: #666;
+}
+
+.contact {
+    background: #f5f5f5;
+}
+
+.contact h2 {
+    margin-bottom: 25px;
+}
+
+.footer {
+    padding: 25px 0;
+    background: #111;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dark-mode {
+    background: #181818;
+    color: #fff;
+}
+
+.dark-mode .navbar {
+    background: #181818;
+    border-color: #444;
+}
+
+.dark-mode .logo,
+.dark-mode .nav-links a {
+    color: #fff;
+}
+
+.dark-mode .hero,
+.dark-mode .contact {
+    background: #222;
+}
+
+.dark-mode .hero-text,
+.dark-mode .about p:last-child,
+.dark-mode .service-card p {
+    color: #bbb;
+}
+
+.dark-mode .service-card {
+    border-color: #444;
+}
+
+.dark-mode .nav-buttons button {
+    background: #181818;
+    color: #fff;
+    border-color: #555;
+}
+
+@media (max-width: 700px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #fff;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        padding: 90px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
